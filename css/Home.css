@@ -64,6 +64,97 @@
     transition: all 0.5 ease-out;
 }
 
+.slideback{
+    position: relative;
+    width: 100%;
+    height: 720px;
+    background-image: linear-gradient(200deg, rgba(171, 171, 171,0.05) 0%, rgba(171, 171, 171,0.05) 23%,rgba(90, 90, 90,0.05) 23%, rgba(90, 90, 90,0.05) 48%,rgba(65, 65, 65,0.05) 48%, rgba(65, 65, 65,0.05) 61%,rgba(232, 232, 232,0.05) 61%, rgba(232, 232, 232,0.05) 100%),linear-gradient(126deg, rgba(194, 194, 194,0.05) 0%, rgba(194, 194, 194,0.05) 11%,rgba(127, 127, 127,0.05) 11%, rgba(127, 127, 127,0.05) 33%,rgba(117, 117, 117,0.05) 33%, rgba(117, 117, 117,0.05) 99%,rgba(248, 248, 248,0.05) 99%, rgba(248, 248, 248,0.05) 100%),linear-gradient(144deg, rgba(64, 64, 64,0.05) 0%, rgba(64, 64, 64,0.05) 33%,rgba(211, 211, 211,0.05) 33%, rgba(211, 211, 211,0.05) 50%,rgba(53, 53, 53,0.05) 50%, rgba(53, 53, 53,0.05) 75%,rgba(144, 144, 144,0.05) 75%, rgba(144, 144, 144,0.05) 100%),linear-gradient(329deg, hsl(148,0%,0%),hsl(148,0%,0%));
+}
+.slideshow{
+    width: 67.2%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slides{
+    display: flex;
+    width: 100%;
+    height: 720px;
+}
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    z-index: 10;
+    background: linear-gradient(#161619,#0F0F10);
+    border: solid 1px transparent;
+    width: 40px;
+    height: 40px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    z-index: 10;
+    background: linear-gradient(#161619,#0F0F10);
+    border: solid 1px transparent;
+    width: 40px;
+    height: 40px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.deals-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deals{
+    width: 550px;
+    height: 180px;
+    position: absolute;
+    z-index: 10;
+    margin-top: 70px;
+    background-color: #B29052;
+    background-image: linear-gradient(315deg, #B29052 0%, #DDCD9D 74%);
+    box-shadow: 3px 3px 6px rgb(0, 0, 0),-3px -3px 6px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deals a{
+    border: solid blue 1px;
+    text-decoration: none;
+    color: black;
+}
+.deals a img{
+    width: 550px;
+    height: 180px;
+}
+
 .find-your-club{
     position: relative;
     width: 100%;
