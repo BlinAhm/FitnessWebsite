@@ -155,6 +155,81 @@
     height: 180px;
 }
 
+.about-us{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1100px;
+    background-color: #050505;
+    opacity: 0.99;
+    background-image:  repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), repeating-linear-gradient(45deg, #000000 25%, #050505 25%, #050505 75%, #000000 75%, #000000);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 350px;
+}
+.about h1{
+    color: white;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.about p{
+    color: white;
+    font-size: 20px;
+    margin: 30px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.judgements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 200px;
+}
+.judgements div{
+    width: 700px;
+}
+.judgements img{
+    height: 300px;
+    width: 400px;
+    box-shadow: 10px 10px 5px black,-5px -5px 5px black;
+    margin: 20px;
+}
+.why-we-do{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.why-we-do div{
+    width: 700px;
+}
+.why-we-do img{
+    height: 300px;
+    width: 550px;
+    box-shadow: 10px 10px 5px black,-5px -5px 5px black;
+    margin: 20px;
+}
+
+
+
 .find-your-club{
     position: relative;
     width: 100%;
