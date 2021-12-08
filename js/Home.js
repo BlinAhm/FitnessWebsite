@@ -9,7 +9,7 @@ const nextBtn = document.querySelector('#nextBtn');
 let counter = 1;
 const size = slides[0].clientWidth;
 
-slideShow.style.transform = 'translateX(' + (-size * counter) +  'px)';
+// slideShow.style.transform = 'translateX(' + (-size * counter) +  'px)';
 
 //Button Listeners
 
