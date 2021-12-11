@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Rebuild Fitness - Sign in</title>
-    <link rel="stylesheet" href="css/Sign-in.css">
+    <link rel="stylesheet" href="css/Sign-up.css">
 </head>
 <body>
     <div class="header">
@@ -19,20 +19,18 @@
         </div>
     </div>
     <form action="">
-        <div class="sign-in-container">
-            <div class="sign-in">
-                <h1>Sign in</h1>
-                <h5>Sign in and start working on a healthier future!</h5>
+        <div class="sign-up-container" id="sign-up-container">
+            <div class="sign-up">
+                <h1>Sign up</h1>
+                <h5>Sign up now and find out your full potential!</h5>
+                <input class="texts" type="text" placeholder="Name">
+                <input class="texts" type="text" placeholder="Last name">
                 <input class="texts" type="email" placeholder="E-mail">
-                <input class="texts" type="password" placeholder="Password">
-                <div class="remember-me">
-                    <div class="check">
-                        <input type="checkbox"><p>Remember me</p>
-                    </div>
-                    <a href="" onclick="heh()">Forgot your password?</a>
-                </div>
+                <input class="texts" id="pass" type="password" placeholder="Password">
+                <input class="texts" id="confirm" type="password" placeholder="Confirm password">
+
                 <input type="submit" value="Login" class="login">
-                <a href="Sign-up.html#sign-up-container" id="sign-up">Don't have an account? Sign up!</a>
+                <a href="Sign-in.html" id="sign-in">Already have an account? Sign in!</a>
             </div>
         </div>
     </form>
@@ -77,6 +75,6 @@
         <h2 class="footer-name">Copyright Rebuild Fitness © 2021</h2>
     </div>
 
-    <script src="js/Sign-in.js"></script>
+    <script src="js/Sign-up.js"></script>
 </body>
 </html>
