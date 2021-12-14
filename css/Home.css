@@ -276,15 +276,22 @@
 .locations li a{
     text-decoration: none;
     color: white;
-    padding: 22px;
+    padding: 16px;
     border: solid transparent 0px;
     border-radius: 5px;
     background: linear-gradient(to right, #205C55 0%, #30675E 50%, #3F7267 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .locations li a:hover{
     border: solid transparent 0px;
     border-radius: 5px;
     background: linear-gradient(to right, #10514C 0%, #1C5A53 50%, #205C55 100%);
+}
+#star{
+    width: 35px;
+    height: 36px;
 }
 
 .memberships{
