@@ -148,6 +148,7 @@
     background: #2C7F75;
     border-radius: 10px;
     margin-bottom: 40px;
+    margin-top: -10px;
 }
 .login:hover{
     cursor: pointer;

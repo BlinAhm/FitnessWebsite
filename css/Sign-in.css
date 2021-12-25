@@ -132,6 +132,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-top: 10px;
 }
 .sign-in p{
     color: whitesmoke;
@@ -145,6 +146,7 @@
     font-weight: 200;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    margin-top: 10px;
 }
 .login{
     color: whitesmoke;
@@ -166,6 +168,15 @@
     font-size: 16px;
 }
 
+label{
+    color: crimson;
+    margin: -25px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 360px;
+    text-align: left;
+    margin-top: -40px;
+}
 
 
 
