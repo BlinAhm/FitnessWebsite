@@ -163,7 +163,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: -10px;
 }
 
 
@@ -277,4 +276,13 @@
     margin-bottom: 20px;
     margin-left: -1000px;
     font-weight: lighter;
+}
+
+label{
+    color: crimson;
+    margin: -25px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 360px;
+    text-align: left;
 }
