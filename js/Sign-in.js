@@ -49,4 +49,8 @@ function signIn(){
     if(!(isPassword.test(SIPassword))){
         document.getElementById("labelSIPassword").innerHTML="Password incorrect!";
     }else{document.getElementById("labelSIPassword").innerHTML=""; ConditionPassword=true;}
+    if(ConditionEmail && ConditionPassword){
+        alert("Sign in successful!");
+        location.href = "Home.html"
+    }
 }
