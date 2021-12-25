@@ -1,4 +1,5 @@
-const slideShow = document.querySelector('.slides');
+function load(){
+    const slideShow = document.querySelector('.slides');
 const slides = document.querySelectorAll('.slides img');
 
 //Buttons
@@ -39,3 +40,4 @@ slideShow.addEventListener('transitionend', () => {
         slideShow.style.transform = 'translateX(' + (-size * counter) +  'px)';
     }
 });
+};
