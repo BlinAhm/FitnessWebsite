@@ -15,6 +15,7 @@ const size = slides[0].clientWidth;
 //Button Listeners
 
 nextBtn.addEventListener('click',function nextSlide(){
+    const size = slides[0].clientWidth;
     if(counter >= slides.length - 1) return;
     slideShow.style.transition = "transform 0.4s ease-in-out";
     counter++;
@@ -22,6 +23,7 @@ nextBtn.addEventListener('click',function nextSlide(){
 });
 
 prevBtn.addEventListener('click',function prevSlide(){
+    const size = slides[0].clientWidth;
     if(counter <= 0) return;
     slideShow.style.transition = "transform 0.4s ease-in-out";
     counter--;
@@ -29,6 +31,7 @@ prevBtn.addEventListener('click',function prevSlide(){
 });
 
 slideShow.addEventListener('transitionend', () => {
+    const size = slides[0].clientWidth;
     if(slides[counter].id === 'lastSlide'){
         slideShow.style.transition = "none";
         counter = slides.length - 2;
