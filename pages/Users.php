@@ -1,3 +1,15 @@
+<?php
+require_once '../controllers/UserController.php';
+
+$user = new UserController();
+if(isset($_POST["insert"])){
+    $user->insert($_POST);
+}
+if(isset($_GET["edit"])){
+   $user->edit($_GET);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +44,30 @@
                 <li><button id="editBtn">Edit</button></li>
                 <li><button id="deleteBtn">Delete</button></li>
             </ul>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Id</th>
+                        <th>Name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $data = $user->readData();
+                        foreach($data as $users): ?>
+                        <tr>
+                            <td><?php echo $users['user_Id']; ?></td>
+                            <td><?php echo $users['name']; ?></td>
+                            <td><?php echo $users['lastName']; ?></td>
+                            <td><?php echo $users['email']; ?></td>
+                            <td><?php echo $users['password']; ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                </tbody>
+            </table>
         </form>
     </div>
 
@@ -103,14 +139,4 @@
 
 
 
-<?php
-require_once '../controllers/UserController.php';
 
-$user = new UserController();
-if(isset($_POST["insert"])){
-    $user->insert($_POST);
-}
-if(isset($_GET["edit"])){
-    echo $_GET["id"];
-}
-?>

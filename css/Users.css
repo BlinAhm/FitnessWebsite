@@ -161,10 +161,24 @@
     padding-right: 10px;
 }
 .form{
-    background-color: #50545f;
+    background: linear-gradient(#50545f,#696d7a);
     width: 97%;
     min-height: 800px;
     align-self: center;
+}
+.table{
+    margin: auto;
+    width: 90%;
+    margin-top: 40px;
+    border: solid rgb(211, 211, 211) 2px;
+    border-collapse: collapse;
+}
+.table th{
+    background-color: #2d7e74;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
 }
 #insertForm{
     transition: 0.5s;
@@ -210,7 +224,7 @@
     height: 20px;
     width: 300px;
     border: solid transparent 1px;
-    background: #bfc0c4;
+    background: #e0e0e0;
     border-radius: 10px;
     color: black;
     font-size: 16px;
@@ -245,7 +259,7 @@ p{
     position: fixed;
     z-index: 1;
     padding-top: 13%;
-    padding-left: 33%;
+    padding-left: 37%;
     left: 0;
     top: 0;
     width: 100%;
@@ -256,8 +270,8 @@ p{
 }
 .editForm{
     position: sticky;
-    width: 500px;
-    height: 550px;
+    width: 300px;
+    height: 230px;
     background: linear-gradient(#186e66,#2a7a71,#2d7e74);
     display: flex;
     flex-direction: column;
@@ -265,13 +279,27 @@ p{
     align-items: center;
     border-radius: 10px;
 }
+.id{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 20px;
+    width: 140px;
+    border: solid transparent 1px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 200;
+}
 .next{
     color: whitesmoke;
     font-size: 18px;
     font-weight: 200;
     text-align: center;
     height: 44px;
-    width: 340px;
+    width: 240px;
     border: solid transparent 1px;
     background: #32a396;
     border-radius: 10px;
@@ -332,4 +360,14 @@ p{
     color: black;
     font-size: 16px;
     font-weight: 200;
+}
+tbody tr>td{
+    color: rgb(231, 231, 231);
+    font-size: 18px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+tbody>tr{
+    background-color: #31333b;
+    border-top: solid white 2px ;
 }
