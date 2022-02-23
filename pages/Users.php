@@ -5,8 +5,11 @@ $user = new UserController();
 if(isset($_POST["insert"])){
     $user->insert($_POST);
 }
-if(isset($_GET["edit"])){
-   $user->edit($_GET);
+if(isset($_POST["update"])){
+    $user->update($_POST,$_GET);
+}
+if(isset($_GET["delete"])){
+    $user->delete($_GET);
 }
 ?>
 
@@ -16,7 +19,7 @@ if(isset($_GET["edit"])){
     <link rel="stylesheet" href="../css/Users.css">
     <title>Users</title>
 </head>
-<body>
+<body onload ="updateIF()">
     <div class="header">
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
@@ -100,36 +103,49 @@ if(isset($_GET["edit"])){
         <form class="editForm" method="GET">
             <span class="close">&times</span>
             <p id="headP">User id:</p>
-            <div>
-                <input class="id" type="number" name="id"> 
-            </div>
+            <input class="id" type="number" name="id"> 
             
-            <input id="next" class="next" type="submit" name="edit" value="Next">
+            <input class="next" id="next" type="submit" value="Next">
         </form>
     </div>
 
+    <?php
+        $edit = $user->edit($_GET);
+    ?>
+
     <div id="updateForm">
         <form class="updateForm" method="POST">
+            
             <span class="close">&times</span>
             <p id="headP">Update user with id:</p>
             <div>
                 <p>Name:</p>
-                <input class="updateInputs" type="text" name="name"> 
+                <input class="updateInputs" type="text" name="name" value="<?php echo $edit['name']; ?>"> 
             </div>
             <div>
                 <p>Last name:</p>
-                <input class="updateInputs" type="text" name="lastName">
+                <input class="updateInputs" type="text" name="lastName" value="<?php echo $edit['lastName'] ?>">
             </div>
             <div>
                 <p>Email:</p>
-                <input class="updateInputs" type="email" name="email">
+                <input class="updateInputs" type="email" name="email" value="<?php echo $edit['email'] ?>">
             </div>
             <div>
                 <p>Password:</p>
-                <input class="updateInputs" type="text" name="password">
+                <input class="updateInputs" type="text" name="password" value="<?php echo $edit['password'] ?>">
             </div>
             
             <input id="update" class="update" type="submit" name="update" value="Update">
+        </form>
+    </div>
+
+    <div id="deleteForm">
+        <form class="deleteForm" method="GET">
+            <span class="close">&times</span>
+            <p id="headP">User id:</p>
+            <input class="deleteId" type="number" name="deleteId"> 
+            
+            <input class="delete" id="delete" type="submit" name="delete" value="Delete">
         </form>
     </div>
 

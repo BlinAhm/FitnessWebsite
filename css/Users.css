@@ -371,3 +371,57 @@ tbody>tr{
     background-color: #31333b;
     border-top: solid white 2px ;
 }
+.delete{
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    height: 44px;
+    width: 240px;
+    border: solid transparent 1px;
+    background: #32a396;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+#deleteForm{
+    transition: 0.5s;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 13%;
+    padding-left: 37%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.deleteForm{
+    position: sticky;
+    width: 300px;
+    height: 230px;
+    background: linear-gradient(#186e66,#2a7a71,#2d7e74);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+.deleteId{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 20px;
+    width: 140px;
+    border: solid transparent 1px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 200;
+}
