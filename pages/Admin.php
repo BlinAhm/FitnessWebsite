@@ -89,49 +89,13 @@ if(isset($_POST['insert'])){
         </form>
     </div>
 
-    <div id="editForm">
-        <form class="editForm" method="GET">
-            <span class="close">&times</span>
-            <p id="headP">User id:</p>
-            <input class="id" type="number" name="id"> 
-            
-            <input class="next" id="next" type="submit" value="Next">
-        </form>
-    </div>
-
-    <div id="updateForm">
-        <form class="updateForm" method="POST">
-            
-            <span class="close">&times</span>
-            <p id="headP">Update user with id:</p>
-            <div>
-                <p>Name:</p>
-                <input class="updateInputs" type="text" name="name" value="<?php echo $edit['name']; ?>"> 
-            </div>
-            <div>
-                <p>Last name:</p>
-                <input class="updateInputs" type="text" name="lastName" value="<?php echo $edit['lastName'] ?>">
-            </div>
-            <div>
-                <p>Email:</p>
-                <input class="updateInputs" type="email" name="email" value="<?php echo $edit['email'] ?>">
-            </div>
-            <div>
-                <p>Password:</p>
-                <input class="updateInputs" type="text" name="password" value="<?php echo $edit['password'] ?>">
-            </div>
-            
-            <input id="update" class="update" type="submit" name="update" value="Update">
-        </form>
-    </div>
-
     <div id="deleteForm">
         <form class="deleteForm" method="GET">
             <span class="close">&times</span>
             <p id="headP">User id:</p>
             <input class="deleteId" type="number" name="deleteId"> 
             
-            <input class="delete" id="delete" type="submit" name="delete" value="Delete">
+            <input class="delete" id="deleteBtn" type="submit" name="delete" value="Delete">
         </form>
     </div>
 
