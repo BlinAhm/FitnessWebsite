@@ -1,5 +1,6 @@
 <?php
-    require_once '../php/navigation.php';
+    require_once '../php/Navigation.php';
+    require_once '../php/FooterDetails.php';
     require_once '../controllers/MessageController.php';
     $msg = new MessageController();
 
@@ -82,7 +83,9 @@
                     <li><a href="Home.php#about-us">About us</a></li>
                     <li><a href="Home.php#find-your-club">Find your club</a></li>
                     <li><a href="Home.php#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.php">Sign in</a></li>
+                    <?php
+                        $footer = new FooterDetails();
+                    ?>
                 </ul>
             </div>
             <div class="contact-socials">

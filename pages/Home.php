@@ -1,6 +1,7 @@
 
 <?php
     require_once '../php/navigation.php';
+    require_once '../php/FooterDetails.php';
     session_start();
 ?>
 
@@ -17,7 +18,7 @@
                 <li><a id="home-nav" href="Home.php">Home</a></li>
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#find-your-club">Find your club</a></li>
-                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="Memberships.php">Memberships</a></li>
                 <li><a href="Contact-us.php">Contact us</a></li>
                 <?php
                     $navLoggedIn = new Navigation();
@@ -150,7 +151,9 @@
                     <li><a href="#about-us">About us</a></li>
                     <li><a href="#find-your-club">Find your club</a></li>
                     <li><a href="#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.php">Sign in</a></li>
+                    <?php
+                        $footer = new FooterDetails();
+                    ?>
                 </ul>
             </div>
             <div class="contact-socials">
