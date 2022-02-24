@@ -1,5 +1,5 @@
 <?php
-require_once '../config/Database.php';
+    require_once '../config/Database.php';
 
     class MessageController{
         private $db;
@@ -15,8 +15,7 @@ require_once '../config/Database.php';
         }
 
         public function send($request){
-            $query = $this->db->getPDO()->prepare('INSERT INTO contact (fullName, email, title, msg) 
-            VALUES (:fullName,:email,:title,:msg)');
+            $query = $this->db->getPDO()->prepare('INSERT INTO contact (fullName, email, title, msg) VALUES (:fullName,:email,:title,:msg)');
 
             $query->bindParam(':fullName',$request['fullName']);
             $query->bindParam(':email',$request['email']);
@@ -28,7 +27,7 @@ require_once '../config/Database.php';
         }
 
         public function delete($id){
-            $query = $this->db->getPDO()->prepare('DELETE from users where user_Id = :id');
+            $query = $this->db->getPDO()->prepare('DELETE FROM contact WHERE contact_id = :id');
             $query->bindParam(':id',$id['deleteId']);
             $query->execute();
 

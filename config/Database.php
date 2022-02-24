@@ -4,9 +4,7 @@
 
         public function __construct(){
             try{
-                if(isset($_SESSION) || !empty($_SESSION)){
-                    return;
-                }else{
+                if(!isset($_SESSION) || empty($_SESSION)){
                     session_start();
                 }
                 

@@ -1,10 +1,14 @@
 <?php
     require_once '../php/navigation.php';
     require_once '../controllers/MessageController.php';
-    session_start();
+    $msg = new MessageController();
 
     if(isset($_POST['msgSend'])){
-        $msg = new MessageController();
+        
+        echo $_POST['fullName'];
+        echo $_POST['email'];
+        echo $_POST['title'];
+        echo $_POST['msg'];
         $msg->send($_POST);
     }
 ?>
