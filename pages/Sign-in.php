@@ -9,12 +9,12 @@
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Home.html#about-us">About us</a></li>
-                <li><a href="Home.html#find-your-club">Find your club</a></li>
-                <li><a href="Home.html#memberships">Memberships</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-                <li><a id="sign-nav" href="Sign-in.html">Sign in</a></li>
+                <li><a href="Home.php">Home</a></li>
+                <li><a href="Home.php#about-us">About us</a></li>
+                <li><a href="Home.php#find-your-club">Find your club</a></li>
+                <li><a href="Home.php#memberships">Memberships</a></li>
+                <li><a href="Contact-us.php">Contact us</a></li>
+                <li><a id="sign-nav" href="Sign-in.php">Sign in</a></li>
             </ul>
         </div>
     </div>
@@ -34,7 +34,7 @@
                     <a href="" onclick="heh()">Forgot your password?</a>
                 </div>
                 <input type="button" value="Login" class="login" onclick="signIn()">
-                <a href="Sign-up.html#sign-up-container" id="sign-up">Don't have an account? Sign up!</a>
+                <a href="Sign-up.php#sign-up-container" id="sign-up">Don't have an account? Sign up!</a>
             </div>
         </div>
     </form>
@@ -56,11 +56,11 @@
             <div class="contact-links">
                 <h1>Links</h1>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Home.html#about-us">About us</a></li>
-                    <li><a href="Home.html#find-your-club">Find your club</a></li>
-                    <li><a href="Home.html#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.html">Sign in</a></li>
+                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="Home.php#about-us">About us</a></li>
+                    <li><a href="Home.php#find-your-club">Find your club</a></li>
+                    <li><a href="Home.php#memberships">Memberships</a></li>
+                    <li><a href="Sign-in.php">Sign in</a></li>
                 </ul>
             </div>
             <div class="contact-socials">

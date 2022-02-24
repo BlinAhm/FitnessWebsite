@@ -1,5 +1,6 @@
 <?php
 require_once '../controllers/UserController.php';
+require_once '../php/navigation.php';
 
 
 $user = new UserController();
@@ -25,13 +26,14 @@ if(isset($_GET["delete"])){
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a href="Home.html">Home</a></li>
+                <li><a href="Home.php">Home</a></li>
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#find-your-club">Find your club</a></li>
                 <li><a href="#memberships">Memberships</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-                <div class="divider"></div>
-                <li><a id="dash-nav" href="Users.php">Dashboard</a></li>
+                <li><a href="Contact-us.php">Contact us</a></li>
+                <?php
+                    $navLoggedIn = new Navigation();
+                ?>
             </ul>
         </div>
     </div>
@@ -40,7 +42,7 @@ if(isset($_GET["delete"])){
         <ul class="dashboard-nav">
             <li><a href="Admin.php">Admin</a></li>
             <li><a href="Users.php" id="dash-nav">Users</a></li>
-            <li><a href="Orders.php">Orders</a></li>
+            <li><a href="Contact.php">Contact</a></li>
         </ul>
         <form class="form">
             <ul class="commands">
