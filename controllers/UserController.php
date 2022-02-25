@@ -57,5 +57,13 @@
 
             return header('Location: Users.php');
         }
+
+        public function emailRegistered($request){
+            $query = $this->db->getPDO()->prepare('SELECT * FROM users WHERE email = :email');
+            $query->bindParam(':email',$request['email']);
+            $query->execute();
+
+            return $query->fetch();
+        }
     }
 ?>

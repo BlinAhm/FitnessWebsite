@@ -38,6 +38,9 @@
             $query->bindParam(':id',$id['deleteId']);
             $query->execute();
 
+            $query1 = $this->db->getPDO()->prepare('UPDATE users SET role = 0 WHERE user_id = :id');
+            $query1->bindParam(':id',$id['deleteId']);
+            $query1->execute();
             return header('Location: Admin.php');
         }
     }

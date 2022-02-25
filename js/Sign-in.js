@@ -37,7 +37,6 @@ function signUp(){
         document.getElementById("labelCPassword").innerHTML="Passwords dont match!";
     }else{document.getElementById("labelCPassword").innerHTML=""; ConditionConfirmPassword=true;}
     if(ConditionName && ConditionLastName && ConditionEmail && ConditionPassword && ConditionConfirmPassword){
-        alert("Sign up successful!");
         form.submit();
     }
 }

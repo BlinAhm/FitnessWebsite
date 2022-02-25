@@ -1,16 +1,4 @@
 
-<?php
-    
-if(!empty($_POST)){
-    require_once '../php/loginValidation.php';
-    require_once '../controllers/UserController.php';
-    $login = new LoginValidate();
-    $user = new UserController();
-    $user->insert($_POST);
-
-}
-?>
-
 <html>
 <head>
     <title>Rebuild Fitness - Sign up</title>
@@ -55,8 +43,12 @@ if(!empty($_POST)){
         </div>
     </form>
 
-
-
+    <?php
+        if(!empty($_POST)){
+            require_once '../php/LoginValidation.php';
+            $validate = new LoginValidate();
+        }
+    ?>
 
     <div class="contact-us">
         <div class="contact-div">
