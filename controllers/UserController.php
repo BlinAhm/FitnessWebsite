@@ -26,7 +26,6 @@
             $query->bindParam(':password',$request['password']);
             $query->execute();
             
-            return header('Location: ../pages/Users.php');
         }
 
         public function edit($id){

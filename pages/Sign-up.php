@@ -3,7 +3,11 @@
     
 if(!empty($_POST)){
     require_once '../php/loginValidation.php';
+    require_once '../controllers/UserController.php';
     $login = new LoginValidate();
+    $user = new UserController();
+    $user->insert($_POST);
+
 }
 ?>
 
@@ -33,11 +37,11 @@ if(!empty($_POST)){
                 <h5>Sign up now and find out your full potential!</h5>
                 <input name="name" id="sName" class="texts" type="text" placeholder="Name">
                 <label id="labelName"></label>
-                <input name="lName" id="sLName" class="texts" type="text" placeholder="Last name">
+                <input name="lastName" id="sLName" class="texts" type="text" placeholder="Last name">
                 <label id="labelLName"></label>
                 <input name="email" id="sEmail" class="texts" type="email" placeholder="E-mail">
                 <label id="labelEmail"></label>
-                <input name="pass" id="sPassword" class="texts" id="pass" type="password" placeholder="Password">
+                <input name="password" id="sPassword" class="texts" id="pass" type="password" placeholder="Password">
                 <label id="labelPassword"></label>
                 <input name="cpass" id="sCPassword" class="texts" id="confirm" type="password" placeholder="Confirm password">
                 <label id="labelCPassword"></label>

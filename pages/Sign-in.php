@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,14 +22,14 @@
             </ul>
         </div>
     </div>
-    <form action="">
+    <form method="post" id="formSignIn">
         <div class="sign-in-container">
             <div class="sign-in">
                 <h1>Sign in</h1>
                 <h5>Sign in and start working on a healthier future!</h5>
-                <input id="SIemail" class="texts" type="email" placeholder="E-mail">
+                <input name="email" id="SIemail" class="texts" type="email" placeholder="E-mail">
                 <label id="labelSIEmail"></label>
-                <input id="SIpassword" class="texts" type="password" placeholder="Password">
+                <input name="password" id="SIpassword" class="texts" type="password" placeholder="Password">
                 <label id="labelSIPassword"></label>
                 <div class="remember-me">
                     <div class="check">
@@ -38,7 +42,12 @@
             </div>
         </div>
     </form>
-
+<?php
+    if(!empty($_POST)){
+        require_once '../php/SignIn.php';
+        $signIn = new SignIn();
+    }
+?>
 
 
 

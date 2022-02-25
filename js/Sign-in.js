@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+const signInForm = document.getElementById('formSignIn');
 
 function heh(){
     alert("Too bad :(");
@@ -53,7 +54,6 @@ function signIn(){
         document.getElementById("labelSIPassword").innerHTML="Password incorrect!";
     }else{document.getElementById("labelSIPassword").innerHTML=""; ConditionPassword=true;}
     if(ConditionEmail && ConditionPassword){
-        alert("Sign in successful!");
-        location.href = "Home.html"
+        signInForm.submit();
     }
 }

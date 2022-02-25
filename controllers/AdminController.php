@@ -24,10 +24,12 @@
         public function insert($request){
             $query = $this->db->getPDO()->prepare('INSERT INTO admin (user_id) 
             VALUES (:user)');
-
             $query->bindParam(':user',$request['userId']);
             $query->execute();
             
+            $query1 = $this->db->getPDO()->prepare('UPDATE users SET role = 1 WHERE user_id = :user');
+            $query1->bindParam(':user',$request['userId']);
+            $query1->execute();
             return header('Location: ../pages/Admin.php');
         }
 
