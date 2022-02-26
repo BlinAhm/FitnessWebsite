@@ -59,7 +59,7 @@
                                             <div>
                                                 <p>'.$memberships['validity'].' Month</p>
                                                 <p class="price">Price: '.$memberships['price'].' €</p>
-                                                <a href="">BUY!</a>
+                                                <a href="">Purchase</a>
                                             </div>
                                         </div>
                                     </div>

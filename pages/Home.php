@@ -45,7 +45,7 @@
 
     <div class="deals-holder">
         <div class="deals">
-            <a href=""><img src="../img/backdeal-template.png" alt="Deals"></a>
+            <a href="Memberships.php"><img src="../img/backdeal-template.png" alt="Deals"></a>
         </div>
     </div>
 
