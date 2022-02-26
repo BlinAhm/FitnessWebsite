@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,23 +13,23 @@
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Home.html#about-us">About us</a></li>
-                <li><a href="Home.html#find-your-club">Find your club</a></li>
-                <li><a href="Home.html#memberships">Memberships</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-                <li><a id="sign-nav" href="Sign-in.html">Sign in</a></li>
+                <li><a href="Home.php">Home</a></li>
+                <li><a href="Home.php#about-us">About us</a></li>
+                <li><a href="Home.php#find-your-club">Find your club</a></li>
+                <li><a href="Home.php#memberships">Memberships</a></li>
+                <li><a href="Contact-us.php">Contact us</a></li>
+                <li><a id="sign-nav" href="Sign-in.php">Sign in</a></li>
             </ul>
         </div>
     </div>
-    <form action="">
+    <form method="post" id="formSignIn">
         <div class="sign-in-container">
             <div class="sign-in">
                 <h1>Sign in</h1>
                 <h5>Sign in and start working on a healthier future!</h5>
-                <input id="SIemail" class="texts" type="email" placeholder="E-mail">
+                <input name="email" id="SIemail" class="texts" type="email" placeholder="E-mail">
                 <label id="labelSIEmail"></label>
-                <input id="SIpassword" class="texts" type="password" placeholder="Password">
+                <input name="password" id="SIpassword" class="texts" type="password" placeholder="Password">
                 <label id="labelSIPassword"></label>
                 <div class="remember-me">
                     <div class="check">
@@ -34,11 +38,16 @@
                     <a href="" onclick="heh()">Forgot your password?</a>
                 </div>
                 <input type="button" value="Login" class="login" onclick="signIn()">
-                <a href="Sign-up.html#sign-up-container" id="sign-up">Don't have an account? Sign up!</a>
+                <a href="Sign-up.php#sign-up-container" id="sign-up">Don't have an account? Sign up!</a>
             </div>
         </div>
     </form>
-
+<?php
+    if(!empty($_POST)){
+        require_once '../php/SignIn.php';
+        $signIn = new SignIn();
+    }
+?>
 
 
 
@@ -56,11 +65,11 @@
             <div class="contact-links">
                 <h1>Links</h1>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Home.html#about-us">About us</a></li>
-                    <li><a href="Home.html#find-your-club">Find your club</a></li>
-                    <li><a href="Home.html#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.html">Sign in</a></li>
+                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="Home.php#about-us">About us</a></li>
+                    <li><a href="Home.php#find-your-club">Find your club</a></li>
+                    <li><a href="Memberships.php">Memberships</a></li>
+                    <li><a href="Sign-in.php">Sign in</a></li>
                 </ul>
             </div>
             <div class="contact-socials">

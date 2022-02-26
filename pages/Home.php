@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+
+<?php
+    require_once '../php/navigation.php';
+    require_once '../php/FooterDetails.php';
+    session_start();
+?>
+
 <html>
 <head>
     <link rel="stylesheet" href="../css/Home.css">
@@ -9,12 +15,14 @@
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a id="home-nav" href="Home.html">Home</a></li>
+                <li><a id="home-nav" href="Home.php">Home</a></li>
                 <li><a href="#about-us">About us</a></li>
                 <li><a href="#find-your-club">Find your club</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-                <li><a href="Sign-in.html">Sign in</a></li>
+                <li><a href="Memberships.php">Memberships</a></li>
+                <li><a href="Contact-us.php">Contact us</a></li>
+                <?php
+                    $navLoggedIn = new Navigation();
+                ?>
             </ul>
         </div>
     </div>
@@ -74,18 +82,18 @@
         <div class="locations">
             <div class="leftL">
                 <ul>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
                 </ul>
             </div>
             <div class="rightL">
                 <ul>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Sign-in.html"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
+                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -97,28 +105,28 @@
             <div class="dayclub">
                 <h1>Day Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 20€</span></a>
-                    <a href="">3 Month <span>Price 40€</span></a>
-                    <a href="">6 Month <span>Price 50€</span></a>
-                    <a href="">12 Month <span>Price 59€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 20€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 40€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 50€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 59€</span></a>
                 </div>
             </div>
             <div class="uniclub">
                 <h1>Uni Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 25€</span></a>
-                    <a href="">3 Month <span>Price 50€</span></a>
-                    <a href="">6 Month <span>Price 70€</span></a>
-                    <a href="">12 Month <span>Price 79€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 25€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 50€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 70€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 79€</span></a>
                 </div>
             </div>
             <div class="multiclub">
                 <h1>Multi Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 30€</span></a>
-                    <a href="">3 Month <span>Price 60€</span></a>
-                    <a href="">6 Month <span>Price 85€</span></a>
-                    <a href="">12 Month <span>Price 99€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 30€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 60€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 85€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 99€</span></a>
                 </div>
             </div>
         </div>
@@ -139,11 +147,13 @@
             <div class="contact-links">
                 <h1>Links</h1>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Home.php">Home</a></li>
                     <li><a href="#about-us">About us</a></li>
                     <li><a href="#find-your-club">Find your club</a></li>
-                    <li><a href="#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.html">Sign in</a></li>
+                    <li><a href="Memberships.php">Memberships</a></li>
+                    <?php
+                        $footer = new FooterDetails();
+                    ?>
                 </ul>
             </div>
             <div class="contact-socials">

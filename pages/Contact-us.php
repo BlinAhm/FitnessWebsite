@@ -1,3 +1,18 @@
+<?php
+    require_once '../php/Navigation.php';
+    require_once '../php/FooterDetails.php';
+    require_once '../controllers/MessageController.php';
+    $msg = new MessageController();
+
+    if(isset($_POST['msgSend'])){
+        
+        echo $_POST['fullName'];
+        echo $_POST['email'];
+        echo $_POST['title'];
+        echo $_POST['msg'];
+        $msg->send($_POST);
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +24,14 @@
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Home.html#about-us">About us</a></li>
-                <li><a href="Home.html#find-your-club">Find your club</a></li>
-                <li><a href="Home.html#memberships">Memberships</a></li>
-                <li><a id="contact-nav" href="Contact-us.html">Contact us</a></li>
-                <li><a href="Sign-in.html">Sign in</a></li>
+                <li><a href="Home.php">Home</a></li>
+                <li><a href="Home.php#about-us">About us</a></li>
+                <li><a href="Home.php#find-your-club">Find your club</a></li>
+                <li><a href="Memberships.php">Memberships</a></li>
+                <li><a id="contact-nav" href="Contact-us.php">Contact us</a></li>
+                <?php
+                    $navLoggedIn = new Navigation();
+                ?>
             </ul>
         </div>
     </div>
@@ -30,18 +47,18 @@
                     Email: ba51658@ubt-uni.net <br>
                            bk51926@ubt-uni.net </p>
             </div>
-            <div class="contact-right">
+            <form method="post" class="contact-right">
                 <div id="write">
                     <h2>Write us!</h2>
-                    <input type="text" placeholder="Name and Surname">
-                    <input type="email" placeholder="E-mail">
-                    <input type="text" placeholder="Title">
+                    <input name="fullName" type="text" placeholder="Name and Surname">
+                    <input name="email" type="email" placeholder="E-mail">
+                    <input name="title" type="text" placeholder="Title">
                 </div>
                 <div class="write2">
-                    <textarea placeholder="Message"></textarea>
-                    <input type="submit" value="Send">
+                    <textarea name="msg" placeholder="Message"></textarea>
+                    <input name="msgSend" type="submit" value="Send">
                 </div>
-            </div>
+            </form>
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6978.752978453489!2d21.172884003877993!3d42.657028375113775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1639606417359!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -62,11 +79,13 @@
             <div class="contact-links">
                 <h1>Links</h1>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Home.html#about-us">About us</a></li>
-                    <li><a href="Home.html#find-your-club">Find your club</a></li>
-                    <li><a href="Home.html#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.html">Sign in</a></li>
+                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="Home.php#about-us">About us</a></li>
+                    <li><a href="Home.php#find-your-club">Find your club</a></li>
+                    <li><a href="Home.php#memberships">Memberships</a></li>
+                    <?php
+                        $footer = new FooterDetails();
+                    ?>
                 </ul>
             </div>
             <div class="contact-socials">

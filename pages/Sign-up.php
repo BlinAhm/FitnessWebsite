@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Rebuild Fitness - Sign up</title>
@@ -9,42 +9,46 @@
         <img src="../img/fit-logo.png" alt="Logo">
         <div class="nav-div">
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Home.html#about-us">About us</a></li>
-                <li><a href="Home.html#find-your-club">Find your club</a></li>
-                <li><a href="Home.html#memberships">Memberships</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-                <li><a id="sign-nav" href="Sign-in.html">Sign in</a></li>
+                <li><a href="Home.php">Home</a></li>
+                <li><a href="Home.php#about-us">About us</a></li>
+                <li><a href="Home.php#find-your-club">Find your club</a></li>
+                <li><a href="Home.php#memberships">Memberships</a></li>
+                <li><a href="Contact-us.php">Contact us</a></li>
+                <li><a id="sign-nav" href="Sign-in.php">Sign in</a></li>
             </ul>
         </div>
     </div>
-    <form action="">
+    <form method="post" id="form" name="form">
         <div class="sign-up-container" id="sign-up-container">
             <div class="sign-up">
                 <h1>Sign up</h1>
                 <h5>Sign up now and find out your full potential!</h5>
-                <input id="sName" class="texts" type="text" placeholder="Name">
+                <input name="name" id="sName" class="texts" type="text" placeholder="Name">
                 <label id="labelName"></label>
-                <input id="sLName" class="texts" type="text" placeholder="Last name">
+                <input name="lastName" id="sLName" class="texts" type="text" placeholder="Last name">
                 <label id="labelLName"></label>
-                <input id="sEmail" class="texts" type="email" placeholder="E-mail">
+                <input name="email" id="sEmail" class="texts" type="email" placeholder="E-mail">
                 <label id="labelEmail"></label>
-                <input id="sPassword" class="texts" id="pass" type="password" placeholder="Password">
+                <input name="password" id="sPassword" class="texts" id="pass" type="password" placeholder="Password">
                 <label id="labelPassword"></label>
-                <input id="sCPassword" class="texts" id="confirm" type="password" placeholder="Confirm password">
+                <input name="cpass" id="sCPassword" class="texts" id="confirm" type="password" placeholder="Confirm password">
                 <label id="labelCPassword"></label>
                 <div class="check">
                     <input type="checkbox"><p>I accept the <span><a>Terms and Conditions</a></span></p>
                 </div>
 
-                <input type="button" value="Login" class="login" onclick="signUp()">
-                <a href="Sign-in.html" id="sign-in">Already have an account? Sign in!</a>
+                <input name="btnSubmit" type="button" value="Login" class="login" onclick="signUp()">
+                <a href="Sign-in.php" id="sign-in">Already have an account? Sign in!</a>
             </div>
         </div>
     </form>
 
-
-
+    <?php
+        if(!empty($_POST)){
+            require_once '../php/LoginValidation.php';
+            $validate = new LoginValidate();
+        }
+    ?>
 
     <div class="contact-us">
         <div class="contact-div">
@@ -60,11 +64,11 @@
             <div class="contact-links">
                 <h1>Links</h1>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Home.html#about-us">About us</a></li>
-                    <li><a href="Home.html#find-your-club">Find your club</a></li>
-                    <li><a href="Home.html#memberships">Memberships</a></li>
-                    <li><a href="Sign-in.html">Sign in</a></li>
+                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="Home.php#about-us">About us</a></li>
+                    <li><a href="Home.php#find-your-club">Find your club</a></li>
+                    <li><a href="Memberships.php">Memberships</a></li>
+                    <li><a href="Sign-in.php">Sign in</a></li>
                 </ul>
             </div>
             <div class="contact-socials">

@@ -1,3 +1,6 @@
+const form = document.getElementById('form');
+const signInForm = document.getElementById('formSignIn');
+
 function heh(){
     alert("Too bad :(");
 }
@@ -7,6 +10,7 @@ let isEmail=/^[\S]+@[\S]+\.[a-zA-Z]{2,3}$/;
 let isPassword=/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9])(?=\S*?[\W]).{6,})\S$/;
 
 function signUp(){
+    
     var sName=document.getElementById('sName').value;
     var sLName=document.getElementById('sLName').value;
     var sEmail=document.getElementById('sEmail').value;
@@ -33,8 +37,7 @@ function signUp(){
         document.getElementById("labelCPassword").innerHTML="Passwords dont match!";
     }else{document.getElementById("labelCPassword").innerHTML=""; ConditionConfirmPassword=true;}
     if(ConditionName && ConditionLastName && ConditionEmail && ConditionPassword && ConditionConfirmPassword){
-        alert("Sign up successful!");
-        location.href = "Home.html"
+        form.submit();
     }
 }
 
@@ -50,7 +53,6 @@ function signIn(){
         document.getElementById("labelSIPassword").innerHTML="Password incorrect!";
     }else{document.getElementById("labelSIPassword").innerHTML=""; ConditionPassword=true;}
     if(ConditionEmail && ConditionPassword){
-        alert("Sign in successful!");
-        location.href = "Home.html"
+        signInForm.submit();
     }
 }
