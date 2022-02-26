@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    height: 100%;
+    width: 100%;
+    background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20));;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    text-align: center;
+    width: 40%;
+    height: 50%;
+    background-color: #5b6467;
+    background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+    box-shadow: 2px 2px 2px rgb(44, 44, 44),-1px -1px 3px rgb(90, 90, 90);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    font-size: 46px;
+    color: #030a0a;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5%;
+}
+.confirm>p{
+    font-size: 35px;
+    margin-bottom: 20%;
+    color: white;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+input{
+    width: 160px;
+    height: 60px;
+    margin-bottom: 10%;
+    background: linear-gradient(#40434E,#383B44);
+    border: solid transparent 2px;
+    border-top: solid #40434E 2px;
+    border-bottom: solid #383B44 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(44, 44, 44),-1px -1px 3px rgb(90, 90, 90);
+    color: white;
+    font-size: 22px;
+}

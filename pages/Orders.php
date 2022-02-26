@@ -6,6 +6,10 @@
     if(isset($_POST['insert'])){
         $order->addOrder($_POST);
     }
+
+    if(isset($_GET['delete'])){
+        $order->removeOrder($_GET);
+    }
 ?>
 <!DOCTYPE html>
 <html>

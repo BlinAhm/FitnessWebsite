@@ -59,7 +59,7 @@
                                             <div>
                                                 <p>'.$memberships['validity'].' Month</p>
                                                 <p class="price">Price: '.$memberships['price'].' €</p>
-                                                <a href="">Purchase</a>
+                                                <a href="Purchase.php?id='.$memberships['membership_id'].'&type='.$memberships['type'].'&price='.$memberships['price'].'&validity='.$memberships['validity'].'">Purchase</a>
                                             </div>
                                         </div>
                                     </div>
@@ -115,6 +115,8 @@
         </div>
         <h2 class="footer-name">Copyright Rebuild Fitness © 2021</h2>
     </div>
+
+
 
 </body>
 </html>
