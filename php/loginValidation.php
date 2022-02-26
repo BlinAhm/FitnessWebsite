@@ -10,17 +10,14 @@
         
             $user = new UserController();
             $email = $user->emailRegistered($_POST);
+            
             if($_POST['email'] != $email['email']){
                 if(preg_match($isAlpha,$_POST['name']) && preg_match($isAlpha,$_POST['lastName']) && preg_match($isEmail,$_POST['email']) 
                 && preg_match($isPassword,$_POST['password']) && $_POST['password'] == $_POST['cpass']){
                     session_start();
-                    $_SESSION['name'] = $_POST['name'];
-                    $_SESSION['lastName'] = $_POST['lastName'];
-                    $_SESSION['email'] = $_POST['email'];
-                    $_SESSION['password'] = $_POST['password'];
-                    $_SESSION['role'] = 0;
                     $user->insert($_POST);
-                    header("Location: Home.php");
+                    $_SESSION['email'] = $_POST['email'];
+                    header("Location: ../php/Registered.php");
                 }
                 
             }

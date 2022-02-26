@@ -7,12 +7,12 @@
             foreach($details as $users){
                 if($users['email'] == $_POST['email']){
                     if($users['password'] == $_POST['password']){
-                        echo '<script>alert("Sign in successful!")</script>';
                         $_SESSION['name'] = $users['name'];
                         $_SESSION['lastName'] = $users['lastName'];
                         $_SESSION['email'] = $users['email'];
                         $_SESSION['password'] = $users['password'];
                         $_SESSION['role'] = $users['role'];
+                        $_SESSION['user_id'] = $users['user_Id'];
                         return header("Location: Home.php");
                     }
                     echo '<script>

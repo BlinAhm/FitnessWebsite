@@ -37,6 +37,8 @@ if(isset($_GET['delete'])){
             <li><a href="Admin.php">Admin</a></li>
             <li><a href="Users.php">Users</a></li>
             <li><a href="Contact.php" id="dash-nav">Contact</a></li>
+            <li><a href="Orders.php">Orders</a></li>
+            <li><a href="MembershipDash.php">Memberships</a></li>
         </ul>
         <form class="form">
             <ul class="commands">

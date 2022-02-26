@@ -16,6 +16,14 @@
             return $query->fetchAll();
         }
 
+        public function getUser($email){
+            $query = $this->db->getPDO()->prepare('SELECT * FROM users WHERE email = :email');
+            $query->bindParam(':email',$email['email']);
+            $query->execute();
+
+            return $query->fetch();
+        }
+
         public function insert($request){
             $query = $this->db->getPDO()->prepare('INSERT INTO users (name,lastName,email,password) 
             VALUES (:name,:lastName,:email,:password)');
