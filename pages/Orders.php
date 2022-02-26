@@ -1,5 +1,11 @@
 <?php
+    require_once '../controllers/OrdersController.php';
     session_start();
+
+    $order = new OrdersController();
+    if(isset($_POST['insert'])){
+        $order->addOrder($_POST);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,11 +57,52 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    <?php
+                        $data = $order->readData();
+                        foreach($data as $orders): ?>
+                        <tr>
+                            <td><?php echo $orders['order_id'] ?></td>
+                            <td><?php echo $orders['user_Id'] ?></td>
+                            <td><?php echo $orders['name'] ?></td>
+                            <td><?php echo $orders['lastName'] ?></td>
+                            <td><?php echo $orders['type'] ?></td>
+                            <td><?php echo $orders['price'].' €' ?></td>
+                            <td><?php echo $orders['validity'].' months' ?></td>
+                        </tr>
+                    <?php endforeach;?>
                 </tbody>
             </table>
         </form>
     </div>
 
+    <div id="insertForm">
+        <form class="insertForm" method="POST">
+            <span class="close">&times</span>
+            <p id="headP">Add order:</p>
+            <div>
+                <p>User id:</p>
+                <input class="userInputs" type="number" name="userId">
+                <p>Membership id:</p>
+                <input class="userInputs" type="number" name="membershipId">
+            </div>
+            
+            <input class="save" type="submit" name="insert" value="Save">
+        </form>
+    </div>
+
+    <div id="deleteForm">
+        <form class="deleteForm" method="GET">
+            <span class="close">&times</span>
+            <p id="headP">Remove order:</p>
+            <div>
+                <p>Order id:</p>
+                <input class="deleteId" type="number" name="deleteId">
+            </div>
+            
+            <input class="delete" id="deleteBtn" type="submit" name="delete" value="Delete">
+        </form>
+    </div>
+
+    <script src="../js/Admin.js"></script>
 </body>
 </html>
