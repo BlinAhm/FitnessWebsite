@@ -1,7 +1,11 @@
 <?php
     require_once '../php/Navigation.php';
     require_once '../php/FooterDetails.php';
+    require_once '../controllers/MembershipController.php';
     session_start();
+
+    $member = new MembershipController();
+    $data = $member->readData();
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,10 +33,46 @@
     <div class="membership-head">
         <table class="table">
             <thead>
-                <th>Memberships</th>
+                <th></th>
+                <th class="theader">Memberships</th>
             </thead>
-            <tbody>
-                <td>1</td>
+            <tbody class="tbody">
+                <tr>
+                    <?php
+                        $count = 1;
+                        foreach($data as $memberships){
+                            echo '
+                                <td>
+                                    <div class="container" id="'.$memberships['type'].'">
+                                        <h1>';
+                                        if($memberships['type'] == 'dayclub'){
+                                            echo 'Day Club';
+                                        }elseif($memberships['type'] == 'uniclub'){
+                                            echo 'Uni Club';
+                                        }elseif($memberships['type'] == 'multiclub'){
+                                            echo 'Multi Club';
+                                        }else{
+                                            echo 'Deal';
+                                        }
+                                        echo '</h1>
+                                        <div>
+                                            <div>
+                                                <p>'.$memberships['validity'].' Month</p>
+                                                <p class="price">Price: '.$memberships['price'].' €</p>
+                                                <a href="">BUY!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                ';
+                                if($count % 3 == 0 && $count != 0){
+                                    echo '</tr><td><div class="space"></div></td><tr>';
+                                }
+                                $count++;
+                        }
+                    ?>
+                </tr>
+                <td><div class="space"></div></td>
             </tbody>
         </table>
     </div>

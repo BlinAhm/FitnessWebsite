@@ -105,28 +105,28 @@
             <div class="dayclub">
                 <h1>Day Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 20€</span></a>
-                    <a href="">3 Month <span>Price 40€</span></a>
-                    <a href="">6 Month <span>Price 50€</span></a>
-                    <a href="">12 Month <span>Price 59€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 20€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 40€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 50€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 59€</span></a>
                 </div>
             </div>
             <div class="uniclub">
                 <h1>Uni Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 25€</span></a>
-                    <a href="">3 Month <span>Price 50€</span></a>
-                    <a href="">6 Month <span>Price 70€</span></a>
-                    <a href="">12 Month <span>Price 79€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 25€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 50€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 70€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 79€</span></a>
                 </div>
             </div>
             <div class="multiclub">
                 <h1>Multi Club</h1>
                 <div>
-                    <a href="">1 Month <span>Price 30€</span></a>
-                    <a href="">3 Month <span>Price 60€</span></a>
-                    <a href="">6 Month <span>Price 85€</span></a>
-                    <a href="">12 Month <span>Price 99€</span></a>
+                    <a href="Memberships.php">1 Month <span>Price 30€</span></a>
+                    <a href="Memberships.php">3 Month <span>Price 60€</span></a>
+                    <a href="Memberships.php">6 Month <span>Price 85€</span></a>
+                    <a href="Memberships.php">12 Month <span>Price 99€</span></a>
                 </div>
             </div>
         </div>
