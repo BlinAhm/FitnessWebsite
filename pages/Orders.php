@@ -1,6 +1,5 @@
 <?php
     session_start();
-    echo $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,10 +41,13 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Admin Id</th>
-                        <th>User Id</th>
-                        <th>Name</th>
-                        <th>Last name</th>
+                        <th class="thID">Id</th>
+                        <th class="thID">User Id</th>
+                        <th class="thName">Name</th>
+                        <th class="thName">Last Name</th>
+                        <th class="thValidity">Type</th>
+                        <th class="thValidity">Price</th>
+                        <th class="thValidity">Validity (Months)</th>
                     </tr>
                 </thead>
                 <tbody>

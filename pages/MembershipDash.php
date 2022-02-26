@@ -5,7 +5,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="../css/MembershipDash.css">
-    <title>Admin</title>
+    <title>Memberships</title>
 </head>
 <body>
     <div class="header">
@@ -41,10 +41,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Admin Id</th>
-                        <th>User Id</th>
-                        <th>Name</th>
-                        <th>Last name</th>
+                        <th class="thID">Id</th>
+                        <th class="thType">Type</th>
+                        <th class="thPrice">Price</th>
+                        <th class="thValidity">Validity (Months)</th>
                     </tr>
                 </thead>
                 <tbody>

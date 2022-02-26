@@ -68,7 +68,7 @@
                     <li><a href="Home.php">Home</a></li>
                     <li><a href="Home.php#about-us">About us</a></li>
                     <li><a href="Home.php#find-your-club">Find your club</a></li>
-                    <li><a href="Home.php#memberships">Memberships</a></li>
+                    <li><a href="Memberships.php">Memberships</a></li>
                     <li><a href="Sign-in.php">Sign in</a></li>
                 </ul>
             </div>

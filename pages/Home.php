@@ -150,7 +150,7 @@
                     <li><a href="Home.php">Home</a></li>
                     <li><a href="#about-us">About us</a></li>
                     <li><a href="#find-your-club">Find your club</a></li>
-                    <li><a href="#memberships">Memberships</a></li>
+                    <li><a href="Memberships.php">Memberships</a></li>
                     <?php
                         $footer = new FooterDetails();
                     ?>
