@@ -49,6 +49,41 @@ class ActivityController{
         $query->bindParam(':activity',$added);
         $query->execute();
     }
+
+    public function userAdd($name,$lastName,$request){
+        $query = $this->db->getPDO()->prepare('INSERT INTO activity (activity) VALUES (:activity)');
+        $added = $name.' '.$lastName.' added a new User: '.$request['name'].' '.$request['lastName'].'.';
+        $query->bindParam(':activity',$added);
+        $query->execute();
+    }
+
+    public function userEdit($name,$lastName,$request,$id){
+        $query = $this->db->getPDO()->prepare('INSERT INTO activity (activity) VALUES (:activity)');
+        $added = $name.' '.$lastName.' edited a User: User Id - '.$id['id'].', name - '.$request['name'].', last name - '.$request['lastName'].'.';
+        $query->bindParam(':activity',$added);
+        $query->execute();
+    }
+
+    public function userRemove($name,$lastName,$request){
+        $query = $this->db->getPDO()->prepare('INSERT INTO activity (activity) VALUES (:activity)');
+        $added = $name.' '.$lastName.' removed a User: Id - '.$request['deleteId'].'.';
+        $query->bindParam(':activity',$added);
+        $query->execute();
+    }
+
+    public function adminAdd($name,$lastName,$request){
+        $query = $this->db->getPDO()->prepare('INSERT INTO activity (activity) VALUES (:activity)');
+        $added = $name.' '.$lastName.' added a new Admin: User Id - '.$request['userId'].'.';
+        $query->bindParam(':activity',$added);
+        $query->execute();
+    }
+
+    public function adminRemove($name,$lastName,$request){
+        $query = $this->db->getPDO()->prepare('INSERT INTO activity (activity) VALUES (:activity)');
+        $added = $name.' '.$lastName.' removed an Admin: Id - '.$request['deleteId'].'.';
+        $query->bindParam(':activity',$added);
+        $query->execute();
+    }
 }
 
 ?>

@@ -7,9 +7,10 @@ $activity = new ActivityController();
 $admin = new AdminController();
 if(isset($_POST['insert'])){
     $admin->insert($_POST);
-    // $admin->insertActivity();
+    $activity->adminAdd($_SESSION['name'],$_SESSION['lastName'],$_POST);
 }
 if(isset($_GET['delete'])){
+    $activity->adminRemove($_SESSION['name'],$_SESSION['lastName'],$_GET);
     $admin->delete($_GET);
 }
 ?>
@@ -84,7 +85,7 @@ if(isset($_GET['delete'])){
                         foreach($acts as $activities): ?>
                         <tr>
                             <td><?php echo $activities['activity_id']; ?></td>
-                            
+
                             <td class="act">
                                 <?php echo $activities['activity']; ?>
                             </td>

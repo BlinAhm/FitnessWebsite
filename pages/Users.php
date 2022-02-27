@@ -1,16 +1,20 @@
 <?php
 require_once '../controllers/UserController.php';
+require_once '../controllers/ActivityController.php';
 require_once '../php/navigation.php';
 
-
+$activity = new ActivityController();
 $user = new UserController();
 if(isset($_POST["insert"])){
+    $activity->userAdd($_SESSION['name'],$_SESSION['lastName'],$_POST);
     $user->insert($_POST);
 }
 if(isset($_POST["update"])){
+    $activity->userEdit($_SESSION['name'],$_SESSION['lastName'],$_POST,$_GET);
     $user->update($_POST,$_GET);
 }
 if(isset($_GET["delete"])){
+    $activity->userRemove($_SESSION['name'],$_SESSION['lastName'],$_GET);
     $user->delete($_GET);
 }
 ?>
