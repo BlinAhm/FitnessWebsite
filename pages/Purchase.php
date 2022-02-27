@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(empty($_SESSION)){
+        header("Location: ../pages/Sign-in.php");
+    }
+
     if(isset($_POST['purchase'])){
         require_once '../controllers/OrdersController.php';
         $order = new OrdersController();

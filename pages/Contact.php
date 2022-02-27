@@ -1,10 +1,13 @@
 <?php
 require_once '../php/navigation.php';
 require_once '../controllers/MessageController.php';
+require_once '../controllers/ActivityController.php';
 
+$activity = new ActivityController();
 $msg = new MessageController();
 
 if(isset($_GET['delete'])){
+    $activity->contactRemove($_SESSION['name'],$_SESSION['lastName'],$_GET);
     $msg->delete($_GET);
 }
 ?>

@@ -1,13 +1,17 @@
 <?php
     require_once '../controllers/OrdersController.php';
+    require_once '../controllers/ActivityController.php';
     session_start();
 
+    $activity = new ActivityController();
     $order = new OrdersController();
     if(isset($_POST['insert'])){
+        $activity->orderAdd($_SESSION['name'],$_SESSION['lastName'],$_POST);
         $order->addOrder($_POST);
     }
 
     if(isset($_GET['delete'])){
+        $activity->orderRemove($_SESSION['name'],$_SESSION['lastName'],$_GET);
         $order->removeOrder($_GET);
     }
 ?>

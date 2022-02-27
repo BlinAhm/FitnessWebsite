@@ -197,9 +197,6 @@
     text-align: left;
     padding-left: 30px;
 }
-.placeholder{
-    height: 40px;
-}
 #insertForm{
     transition: 0.5s;
     display: none;
@@ -336,4 +333,9 @@ tbody tr>td{
 tbody>tr{
     background-color: #31333b;
     border-top: solid white 2px ;
+}
+.act{
+    padding-top: 5px;
+    padding-left: 30px;
+    text-align: left;
 }

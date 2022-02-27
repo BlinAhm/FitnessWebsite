@@ -1,7 +1,9 @@
 <?php
 require_once '../controllers/AdminController.php';
+require_once '../controllers/ActivityController.php';
 require_once '../php/navigation.php';
 
+$activity = new ActivityController();
 $admin = new AdminController();
 if(isset($_POST['insert'])){
     $admin->insert($_POST);
@@ -73,13 +75,21 @@ if(isset($_GET['delete'])){
             </table>
             <table class="activity">
                 <thead>
+                    <th>Id</th>
                     <th>Activity</th>
                 </thead>
                 <tbody>
                     <?php
-                        
-                    ?>
-                    <td class="placeholder"></td>
+                        $acts = $activity->readData();
+                        foreach($acts as $activities): ?>
+                        <tr>
+                            <td><?php echo $activities['activity_id']; ?></td>
+                            
+                            <td class="act">
+                                <?php echo $activities['activity']; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </form>

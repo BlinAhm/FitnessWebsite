@@ -1,12 +1,17 @@
 <?php
     session_start();
     require_once '../controllers/MembershipController.php';
+    require_once '../controllers/ActivityController.php';
     $member = new MembershipController();
+    $activity = new ActivityController();
 
     if(isset($_POST['insert'])){
+        $activity->membershipAdd($_SESSION['name'],$_SESSION['lastName'], $_POST);
         $member->addMembership($_POST);
+        
     }
     if(isset($_GET['delete'])){
+        $activity->membershipRemove($_SESSION['name'],$_SESSION['lastName'], $_GET);
         $member->removeMembership($_GET);
     }
 ?>

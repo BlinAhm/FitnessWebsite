@@ -2,7 +2,9 @@
     require_once '../php/Navigation.php';
     require_once '../php/FooterDetails.php';
     require_once '../controllers/MessageController.php';
+    require_once '../php/Text.php';
     $msg = new MessageController();
+    $text = new Text();
 
     if(isset($_POST['msgSend'])){
         
@@ -40,12 +42,7 @@
         <div class="contact-main">
             <div class="contact-main-details">
                 <h1 id="address">Address and Contact</h1>
-                <p>Adress: Rr. Bedri Shala “Bregu i Diellit” <br>
-                    10000 Prishtinë, Republika e Kosovës <br>
-                    Tel: +383 49 54 25 59 <br>
-                    Web: www.rebuildfit.eu <br>
-                    Email: ba51658@ubt-uni.net <br>
-                           bk51926@ubt-uni.net </p>
+                <?php $text->contact(); ?>
             </div>
             <form method="post" class="contact-right">
                 <div id="write">
@@ -69,12 +66,7 @@
         <div class="contact-div">
             <div class="contact-details">
                 <h1>Contact</h1>
-                <p>Adress: Rr. Bedri Shala “Bregu i Diellit” <br>
-                    10000 Prishtinë, Republika e Kosovës <br>
-                    Tel: +383 49 54 25 59 <br>
-                    Web: www.rebuildfit.eu <br>
-                    Email: ba51658@ubt-uni.net <br>
-                           bk51926@ubt-uni.net </p>
+                <?php $text->contact(); ?>
             </div>
             <div class="contact-links">
                 <h1>Links</h1>
