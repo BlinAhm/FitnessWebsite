@@ -269,35 +269,10 @@
     align-items: center;
     background: transparent;
 }
-.locations ul{
-    height: 350px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: transparent;
-    list-style: none;
-}
-.locations li a{
-    text-decoration: none;
-    color: white;
-    padding: 16px;
-    border: solid transparent 0px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #205C55 0%, #30675E 50%, #3F7267 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.locations li a:hover{
-    border: solid transparent 0px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #10514C 0%, #1C5A53 50%, #205C55 100%);
-}
-#star{
-    width: 35px;
-    height: 36px;
+#location{
+    height: 380px;
+    width: 620px;
+    box-shadow: 5px 5px 5px black,-1px -1px 5px black;
 }
 
 .memberships{
@@ -556,6 +531,14 @@
     .why-we-do{
         flex-direction: column;
     }
+    .find-your-club{
+        display: flex;
+        flex-direction: column;
+    }
+    #location{
+        height: 250px;
+        width: 450px;
+    }
 
 }
 @media only screen and (max-width: 910px){
@@ -568,6 +551,20 @@
     }
 }
 @media only screen and (max-width: 800px){
+    .contact-details p{
+        width: 140%;
+    }
+    .contact-div{
+        margin-left: 20px;
+    }
+    .contact-socials{
+        margin-right: -200px;
+    }
+    .about p{
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
+    }
     .slideback{
         height: 310px;
     }

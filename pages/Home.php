@@ -78,22 +78,7 @@
             <?php $text->fyc(); ?>
         </div>
         <div class="locations">
-            <div class="leftL">
-                <ul>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="rightL">
-                <ul>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                    <li><a href="Locations.php"><img id="star" src="../img/star.png" alt=""></a></li>
-                </ul>
-            </div>
+            <img id="location" src="../img/gymSpace.png" alt="">
         </div>
     </div>
 
